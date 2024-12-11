@@ -1,0 +1,21 @@
+{% extends "_master.html" %}
+{% block content %}
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Título</th>
+            <th>Gênero</th>
+            <th>Nota</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for livro in livros %}
+            <tr>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.genero }}</td>
+                <td>{{ livro.nota }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
